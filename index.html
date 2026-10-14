@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo educativo de perguntas e respostas para estudantes do 6º ano.">
+    <title>Desafio do Saber</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">🎓 Desafio do Saber</div>
+        <p>Aprender também pode ser divertido!</p>
+    </header>
+
+    <main class="container">
+        <section id="tela-inicial" class="cartao">
+            <div class="emoji">🚀</div>
+            <h1>Vamos testar seus conhecimentos?</h1>
+            <p>
+                Responda às perguntas, acumule pontos e descubra
+                quantas você consegue acertar!
+            </p>
+            <ul class="regras">
+                <li>⭐ Cada resposta correta vale 10 pontos.</li>
+                <li>🧠 Leia cada pergunta com atenção.</li>
+                <li>🏆 Tente conquistar a pontuação máxima!</li>
+            </ul>
+            <button id="btn-iniciar" class="botao botao-principal">
+                Começar o jogo!
+            </button>
+        </section>
+
+        <section id="tela-jogo" class="cartao escondido"
+                 aria-labelledby="pergunta">
+            <div class="informacoes">
+                <span id="contador">Pergunta 1 de 10</span>
+                <span class="pontuacao">⭐ <span id="pontos">0</span> pontos</span>
+            </div>
+
+            <div class="barra-progresso" role="progressbar"
+                 aria-label="Progresso do jogo"
+                 aria-valuemin="0" aria-valuemax="10"
+                 aria-valuenow="0" id="barra-container">
+                <div id="barra" class="barra"></div>
+            </div>
+
+            <p id="categoria" class="categoria">Conhecimentos gerais</p>
+            <h2 id="pergunta">Pergunta aparecerá aqui</h2>
+
+            <div id="alternativas" class="alternativas"></div>
+
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+
+            <button id="btn-proxima" class="botao botao-principal escondido">
+                Próxima pergunta →
+            </button>
+        </section>
+
+        <section id="tela-final" class="cartao escondido"
+                 aria-labelledby="titulo-final">
+            <div class="emoji" id="emoji-final">🏆</div>
+            <h2 id="titulo-final">Parabéns!</h2>
+            <p id="mensagem-final"></p>
+
+            <div class="resultado">
+                <p>⭐ Pontuação final</p>
+                <strong id="pontuacao-final">0 pontos</strong>
+                <p id="acertos-final">Você acertou 0 de 10 perguntas.</p>
+            </div>
+
+            <button id="btn-reiniciar" class="botao botao-principal">
+                🔄 Jogar novamente
+            </button>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Feito para aprender, brincar e descobrir! 💜</p>
+        <p>Desafio do Saber • Jogo educativo para o 6º ano</p>
+    </footer>
+</body>
+</html>
